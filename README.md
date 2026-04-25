@@ -1,5 +1,5 @@
 # Navigating Accessible Care
-### ASA DataFest 2026 — Stormont Vail Health | Team Double A | Knox College
+### Central Illinois ASA DataFest 2026
 **🏅 Honorable Mention**
  
 ---
@@ -11,11 +11,11 @@ This project was completed as part of ASA DataFest 2026, a 48-hour competitive d
 Our central question: **Is SVH reaching the patients who need it most?**
  
 The team split into two angles:
-- **Transportation barriers** (teammate) — measurable impact on ED dependency and patient outcomes across all age groups
-- **Pediatric geographic reach** (my focus) — who SVH's pediatric patients are, where they come from, and how many the system can't locate at all
+- **Transportation barriers** (teammate): measurable impact on ED dependency and patient outcomes across all age groups
+- **Pediatric geographic reach** (my focus): who SVH's pediatric patients are, where they come from, and how many the system can't locate at all
 ---
  
-## My contribution — The invisible patient
+## My contribution: The invisible patient
  
 ### The finding
  
@@ -27,10 +27,10 @@ During competition week, KU Med announced it was closing its PICU, making SVH th
  
 An interactive Power BI dashboard visualizing SVH's pediatric patient geography across Kansas, including:
  
-- **Census block bubble map** — patient density by geographic block, sized by patient count, revealing the concentration around Topeka and the corridor cities (Lawrence, Junction City, Emporia, Manhattan) alongside the blank rural areas representing the invisible 47.9%
-- **Year-over-year growth chart** — unique pediatric patients 2022–2025, annotated with the KU Med PICU closure
-- **Location status bar chart** — known vs unknown patient location, with a transport flag slicer showing how the invisible population skews toward families with transportation barriers
-- **KPI cards** — unique patients (2025), 3-year growth, counties represented, unknown location rate
+- **Census block bubble map**: patient density by geographic block, sized by patient count, revealing the concentration around Topeka and the corridor cities (Lawrence, Junction City, Emporia, Manhattan) alongside the blank rural areas representing the invisible 47.9%
+- **Year-over-year growth chart**: unique pediatric patients 2022–2025, annotated with the KU Med PICU closure
+- **Location status bar chart**: known vs unknown patient location, with a transport flag slicer showing how the invisible population skews toward families with transportation barriers
+- **KPI cards**: unique patients (2025), 3-year growth, counties represented, unknown location rate
 ![Dashboard screenshot](dashboard.png)
  
 ### Key numbers
@@ -53,13 +53,13 @@ Data was provided by Stormont Vail Health via the ASA DataFest program and is **
  
 | File | Rows |
 |---|---|
-| `encounters.csv` — patient–provider encounters | 8.1M |
-| `patients.csv` — demographics and geography | 947K |
-| `diagnosis.csv` — ICD-10 codes and groupings | 1.5M |
-| `departments.csv` — SVH locations and specialties | 11.6K |
-| `providers.csv` — provider information | 299K |
-| `social_determinants.csv` — SDOH survey responses | 3.97M |
-| `tigercensuscodes.csv` — US Census block geographic data | 2.4K |
+| `encounters.csv`: patient–provider encounters | 8.1M |
+| `patients.csv`: demographics and geography | 947K |
+| `diagnosis.csv`: ICD-10 codes and groupings | 1.5M |
+| `departments.csv`: SVH locations and specialties | 11.6K |
+| `providers.csv`: provider information | 299K |
+| `social_determinants.csv`: SDOH survey responses | 3.97M |
+| `tigercensuscodes.csv`: US Census block geographic data | 2.4K |
  
 ---
  
@@ -69,9 +69,9 @@ Data was provided by Stormont Vail Health via the ASA DataFest program and is **
 Pediatric patients were identified using `PatientBirthYearBin >= 2005`, capturing patients who were under 18 at some point during the 2022–2025 data window. This produced 150,100 unique pediatric patients.
  
 ### Geographic analysis
-Patient locations were mapped using `CensusBlockGroupFipsCode` joined to the `tigercensuscodes` file via `GEOID`, which provided centroid latitude and longitude (`CENTLAT`, `CENTLON`) for each census block. Blocks with fewer than 11 patients are suppressed in the source data per US Census privacy regulations — this suppression disproportionately affects rural areas, making the 47.9% unknown location figure both a data limitation and the central story point.
+Patient locations were mapped using `CensusBlockGroupFipsCode` joined to the `tigercensuscodes` file via `GEOID`, which provided centroid latitude and longitude (`CENTLAT`, `CENTLON`) for each census block. Blocks with fewer than 11 patients are suppressed in the source data per US Census privacy regulations; this suppression disproportionately affects rural areas, making the 47.9% unknown location figure both a data limitation and the central story point.
  
-County was extracted from the first five digits of the FIPS code (state + county), revealing that SVH draws patients from 90 distinct counties — far beyond the stated 19-county service area.
+County was extracted from the first five digits of the FIPS code (state + county), revealing that SVH draws patients from 90 distinct counties, which is far beyond the stated 19-county service area.
  
 ### Transportation flag
 Patients were flagged for transportation need based on "Yes" responses to the Transportation Needs domain of the SDOH survey. 217 unique pediatric patients were flagged, and their encounter patterns (after-hours rate, ED rate) were compared against non-flagged patients.
@@ -84,19 +84,19 @@ Python (`pandas`, `numpy`) for data wrangling and export. Power BI for interacti
 ## Recommendations
  
 1. **Fix address collection at registration**: 47.9% of pediatric patients have no recorded location. SVH cannot do geographic outreach or transportation planning for families it cannot locate. Making address collection mandatory at intake is a zero-cost, immediate fix.
-2. **Plan capacity for the real footprint**: SVH believes it serves 19 counties. The data shows 90. Capacity planning — staffing, clinic hours, PICU beds — should reflect the actual geographic reach, especially as the KU Med closure expands demand eastward toward Lawrence and the KC corridor.
+2. **Plan capacity for the real footprint**: SVH believes it serves 19 counties. The data shows 90. Capacity planning (staffing, clinic hours, PICU beds) should reflect the actual geographic reach, especially as the KU Med closure expands demand eastward toward Lawrence and the KC corridor.
 3. **Invest in corridor outreach now**: Extended clinic hours, telehealth triage, and mobile outreach targeted at the corridor cities (Lawrence, Junction City, Emporia) and the rural census blocks that are on the map but underserved, before they become the blocks that disappear entirely.
 ---
  
 ## Results
  
-**🏅 Honorable Mention — ASA DataFest 2026, Knox College**
+**🏅 Honorable Mention at Central Illinois ASA DataFest 2026**
  
 ---
  
 ## Team
  
-**Team Double A — Knox College**
+**Team Double A from Knox College**
 - Anh Phan
 - Akbota Serikkyzy
 ---
