@@ -83,9 +83,9 @@ Python (`pandas`, `numpy`) for data wrangling and export. Power BI for interacti
  
 ## Recommendations
  
-1. **Fix address collection at registration** — 47.9% of pediatric patients have no recorded location. SVH cannot do geographic outreach or transportation planning for families it cannot locate. Making address collection mandatory at intake is a zero-cost, immediate fix.
-2. **Plan capacity for the real footprint** — SVH believes it serves 19 counties. The data shows 90. Capacity planning — staffing, clinic hours, PICU beds — should reflect the actual geographic reach, especially as the KU Med closure expands demand eastward toward Lawrence and the KC corridor.
-3. **Invest in corridor outreach now** — Extended clinic hours, telehealth triage, and mobile outreach targeted at the corridor cities (Lawrence, Junction City, Emporia) and the rural census blocks that are on the map but underserved, before they become the blocks that disappear entirely.
+1. **Fix address collection at registration**: 47.9% of pediatric patients have no recorded location. SVH cannot do geographic outreach or transportation planning for families it cannot locate. Making address collection mandatory at intake is a zero-cost, immediate fix.
+2. **Plan capacity for the real footprint**: SVH believes it serves 19 counties. The data shows 90. Capacity planning — staffing, clinic hours, PICU beds — should reflect the actual geographic reach, especially as the KU Med closure expands demand eastward toward Lawrence and the KC corridor.
+3. **Invest in corridor outreach now**: Extended clinic hours, telehealth triage, and mobile outreach targeted at the corridor cities (Lawrence, Junction City, Emporia) and the rural census blocks that are on the map but underserved, before they become the blocks that disappear entirely.
 ---
  
 ## Results
